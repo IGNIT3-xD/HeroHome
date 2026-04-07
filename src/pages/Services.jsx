@@ -61,7 +61,7 @@ const Services = () => {
                 <PriceRange maxPrice={maxPrice} setData={setData} />
             </div>
             <h1 className='font-bold text-2xl lg:text-3xl text-center my-8'>All <span className='text-amber-300'> Services </span><span className='text-xs'>({data.length})</span></h1>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 mb-10'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-10 mb-10'>
                 {
                     data.length === 0 ? <p className='text-4xl font-bold text-center md:col-span-2 lg:col-span-3'>No <span className='text-amber-300'>Service</span> Found</p> :
                         data.map(service => <Card key={service._id} service={service}></Card>)

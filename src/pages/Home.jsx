@@ -13,16 +13,17 @@ const Home = () => {
     return (
         <div>
             <Slider></Slider>
-            <div className='w-11/12 mx-auto'>
+            <div className='w-11/12 mx-auto my-10'>
                 <ScrollAnim>
                     <h1 className='font-bold text-2xl md:text-3xl lg:text-4xl text-center mb-10'>Our Best <span className='text-amber-300'> Rated </span>Services</h1>
                 </ScrollAnim>
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 items-stretch'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-10 items-stretch mb-10'>
                     {
                         services.map(service => <Card key={service._id} service={service}></Card>)
                     }
-                    <Link to={'/services'} className='underline text-amber-300 hover:text-amber-400'>See more...</Link>
                 </div>
+                <Link to={'/services'} className='underline text-amber-300 hover:text-amber-400'>See more...</Link>
+
                 <div className='my-10 p-8 bg-linear-to-l from-amber-600 to-amber-300 text-center text-white rounded-lg'>
                     <h1 className='text-3xl font-bold'>Trusted by Lads, Built for You</h1>
                     <div className='flex flex-col md:flex-row items-center justify-center gap-10 md:gap-14 mt-8'>
@@ -43,10 +44,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
                 <div>
-                    <h1 className='text-2xl lg:text-3xl font-bold text-center'>Why<span className='text-amber-300'> Choose </span>Us?</h1>
+                    <h1 className='font-bold text-2xl md:text-3xl lg:text-4xl text-center my-10'>Why<span className='text-amber-300'> Choose </span>Us?</h1>
                     <Choose />
-                    <h1 className='text-2xl lg:text-3xl font-bold text-center my-10'>Frequently <span className='text-amber-300'>ask</span> and question</h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center my-10'>Frequently <span className='text-amber-300'>ask</span> and question</h1>
                     <Faq />
                 </div>
             </div>
